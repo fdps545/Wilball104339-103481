@@ -233,17 +233,17 @@ namespace Wilball104339_103481
             cameraMatrix *= Matrix4.CreateTranslation(sideX, up, forwardZ);
 
            
-            if (Keyboard[Key.ShiftRight])
+            //if (Keyboard[Key.ShiftRight])
             {
                 cameraMatrix *= Matrix4.CreateRotationY(mouseX);
                 mouseX = Mouse.XDelta / look;
             }
 
-            if (Keyboard[Key.ShiftLeft])
+            /*if (Keyboard[Key.ShiftLeft])
             {
                 cameraMatrix *= Matrix4.CreateRotationX(mouseY);
                 mouseY = Mouse.YDelta / look;
-            }
+            }*/
 
             //cameraMatrix *= Matrix4.CreateRotationY(mouseX);
             //cameraMatrix *= Matrix4.CreateRotationX(mouseY);
@@ -261,14 +261,14 @@ namespace Wilball104339_103481
                 Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Left, Cursor.Position.Y);
             }
 
-            if ((Cursor.Position.Y >= Screen.PrimaryScreen.Bounds.Top - 1))// || Keyboard[Key.ShiftRight]))
+            /*if ((Cursor.Position.Y >= Screen.PrimaryScreen.Bounds.Top - 1))// || Keyboard[Key.ShiftRight]))
             {
                 Cursor.Position = new Point(Cursor.Position.X, Screen.PrimaryScreen.Bounds.Top - 1);
             }
             else if ((Cursor.Position.Y <= Screen.PrimaryScreen.Bounds.Bottom))// || Keyboard[Key.ShiftRight]))
             {
                 Cursor.Position = new Point(Cursor.Position.X, Screen.PrimaryScreen.Bounds.Bottom);
-            }
+            }*/
 
             if (Keyboard[Key.Escape])
                 Exit();
